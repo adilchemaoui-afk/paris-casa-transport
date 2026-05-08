@@ -2,7 +2,7 @@
 
 import { Phone } from 'lucide-react'
 
-const phone = process.env.COMMERCIAL_PHONE || '+33 6 12 34 56 78'
+const phone = process.env.COMMERCIAL_PHONE || '0753256897'
 
 export function PhoneButton() {
   return (

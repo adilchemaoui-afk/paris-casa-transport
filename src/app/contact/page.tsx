@@ -6,9 +6,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema } from '@/lib/schema'
 import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
-const phone = process.env.COMMERCIAL_PHONE || '+33 6 12 34 56 78'
-const email = 'contact@pariscasa-transport.com'
-const company = process.env.COMPANY_NAME || 'Paris Casa Transport'
+const phone = process.env.COMMERCIAL_PHONE || '0753256897'
+const email = 'adc.lecolibri@gmail.com'
+const company = process.env.COMPANY_NAME || 'Paris Casa Livraison'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -56,7 +56,6 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
             <div>
               <h2 className="text-2xl font-serif font-bold text-moroccan-red mb-6">
                 Nos coordonnées
@@ -67,14 +66,25 @@ export default function ContactPage() {
                     <Phone size={20} />
                   </div>
                   <div>
-                    <div className="font-semibold text-deep-brown">Téléphone</div>
+                    <div className="font-semibold text-deep-brown">Rachid</div>
                     <div className="text-moroccan-red font-bold text-lg">{phone}</div>
                     <div className="text-sm text-gray-500">Lun–Ven, 8h–20h</div>
                   </div>
                 </a>
 
-                <a href={`mailto:${email}`} className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-moroccan-gold/10">
+                <a href={`tel:0752336725`} className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-moroccan-gold/10">
                   <div className="bg-moroccan-green text-white p-3 rounded-xl shrink-0">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-deep-brown">Amine</div>
+                    <div className="text-moroccan-red font-bold text-lg">0752336725</div>
+                    <div className="text-sm text-gray-500">Lun–Ven, 8h–20h</div>
+                  </div>
+                </a>
+
+                <a href={`mailto:${email}`} className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-moroccan-gold/10">
+                  <div className="bg-moroccan-gold text-deep-brown p-3 rounded-xl shrink-0">
                     <Mail size={20} />
                   </div>
                   <div>
@@ -92,12 +102,12 @@ export default function ContactPage() {
                     <div className="font-semibold text-deep-brown">Bureaux</div>
                     <div className="text-gray-700">Paris, France</div>
                     <div className="text-gray-700">Casablanca, Maroc</div>
+                    <div className="text-sm text-moroccan-red mt-1">Couverture : Tanger → Laâyoune (Lagouira)</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
             <div>
               <h2 className="text-2xl font-serif font-bold text-moroccan-red mb-6">
                 Envoyer un message
