@@ -34,7 +34,7 @@ export async function PATCH(request: Request) {
     const { id, status } = body
 
     const supabase = getSupabaseAdmin()
-    const { data, error } = await supabase
+    const { data, error } = await (supabase as any)
       .from('contacts')
       .update({ status })
       .eq('id', id)
