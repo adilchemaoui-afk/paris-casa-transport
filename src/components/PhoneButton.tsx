@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { Phone } from 'lucide-react'
 
 const phone = process.env.COMMERCIAL_PHONE || '0753256897'
@@ -7,7 +8,7 @@ const phone = process.env.COMMERCIAL_PHONE || '0753256897'
 export function PhoneButton() {
   return (
     <a
-      href={`tel:${phone.replace(/\s/g, '')}`}
+      href={`tel:${phone}`}
       className="fixed bottom-6 right-6 z-50 bg-moroccan-green text-white p-4 rounded-full shadow-xl shadow-moroccan-green/30 hover:scale-110 transition-transform lg:hidden"
       aria-label="Appeler le commercial"
     >
